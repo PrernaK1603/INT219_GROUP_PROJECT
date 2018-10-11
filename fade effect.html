@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+#hover1{
+font-family:sans-serif;
+width:550px;
+position:relative;
+}
+img{
+opacity:1;
+display:block;
+width:550px;
+height:369px;
+transition:.5s ease;
+}
+#content{
+position:absolute;
+top:50%;
+left:45%;
+transform:translate(-50%,-50%);
+text-transform:uppercase;
+font-size:50px;
+color:black;
+white-space:nowrap;
+overflow:hidden;
+}
+#content a{
+font-size:25px;
+display:block;
+background-color:#ff771d;
+text-align:center;
+padding:10px;
+cursor:pointer;
+}
+#hover2{
+opacity:0;
+}
+#hover1:hover img{
+opacity:.5;
+}
+#hover1:hover #hover2{
+opacity:1;
+}
+</style>
+</head>
+<body>
+<div id="hover1">
+<img src="goa_trip.jpg" >
+<div id="hover2">
+<div id="content">Title &nbsp <a>READ MORE</a>
+</div>
+</div>
+</div>
+</body>
+</html>
