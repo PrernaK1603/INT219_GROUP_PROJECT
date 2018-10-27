@@ -1,0 +1,95 @@
+<!--<div id="slider">
+<div id="box">
+<img src="aust.jpg">
+</div>
+<button class="prew" onclick="prevImage()"> - </button>
+<button class="next" onclick="nextImage()"> + </button>
+</div>
+<script>
+var slider_content=document.getElementById("box");
+var image=['aust','ob','goa','malasia','kulu','paris','beach','raj','new_delhi','taj','shi'];
+var i=image.length;
+function nextImage()
+{
+    if(i<image.length)
+    {
+        i=i+1;
+    }
+	else
+	{
+	    i=1;
+	}
+	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+}
+function prevImage()
+{
+    if(i<image.length+1 && i>1)
+    {
+        i=i-1;
+    }
+	else
+	{
+	    i=image.length;
+	}
+	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+}
+</script>-->
+<!--<div id="photo1" style="width:250px; height:369px;float:left; background-color:black; color:white; margin-left:0px; float:left;">
+<img src="kerala_h.jpg" name="slides" style="width:262px; height:369px;">
+<script>
+var image8=new Image()
+image8.src="kerala_h.jpg"
+var image9=new Image()
+image9.src="shimla_hotel.jpg"
+var image10=new Image()
+image10.src="goa_h.jpg"
+var image11=new Image()
+image11.src="maclod_h.jpg"
+var image12=new Image()
+image12.src="hh_h.jpg"
+</script>
+
+<script type="text/javascript">
+var steps=1
+function slideits(){
+document.images.slides.src=eval("image"+step+".src")
+if(steps<7)
+step++
+else
+steps=1
+setTimeout("slideits()",1500)
+}
+slideits()
+</script>-->
+<!--#slider{
+width:819px;
+height:350px;
+margin:20px;
+position:relative;
+box-shadow:0px 0px #ccc;
+float:left;
+}
+.prew,.next{
+padding:20px;
+border:none;
+background-color:black;
+font-size:20px;
+color:white;
+position:absolute;
+top:35%;
+cursor:pointer;
+float:left;
+}
+.next{
+border-radius:10px 0px 0px 10px;
+margin-left:770px; 
+float:left;
+}
+.prew{
+border-radius:0px 10px 10px 0px;
+}
+#last{
+width:1350px;
+height:700px;
+background-color:black;
+}-->

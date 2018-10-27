@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+img{
+width:819px;
+height:350px;
+}
+#slider{
+width:819px;
+height:350px;
+margin:20px auto;
+position:relative;
+box-shadow:0px 0px 5px 2px #ccc;
+}
+button{
+padding:20px;
+border:none;
+background-color:black;
+font-size:30px;
+color:white;
+position:absolute;
+top:35%;
+cursor:pointer;
+}
+.next{
+border-radius:10px 0px 0px 10px;
+margin-left:760px; 
+}
+.prew{
+border-radius:0px 10px 10px 0px;
+}
+</style>
+</head>
+<body>
+<div id="slider">
+<div id="box">
+<img src="india-free.jpg">
+<!--<img src="goa.jpg">
+<img src="malasia.jpg">
+<img src="kulu.jpg">
+<img src="paris.jpg">
+<img src="beach.jpg">
+<img src="raj.jpg">
+<img src="new_elhi.jpg">-->
+</div>
+<button class="prew" onclick="prevImage()"> - </button>
+<button class="next" onclick="nextImage()"> + </button>
+</div>
+<script>
+var slider_content=document.getElementById("box");
+var image=['india-free','goa','malasia','kulu','paris','beach','raj','new_delhi'];
+var i=image.length;
+function nextImage()
+{
+    if(i<image.length)
+    {
+        i=i+1;
+    }
+	else
+	{
+	    i=1;
+	}
+	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+}
+function prevImage()
+{
+    if(i<image.length+1 && i>1)
+    {
+        i=i-1;
+    }
+	else
+	{
+	    i=image.length;
+	}
+	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+}
+</script>
+</body>
+</html>
